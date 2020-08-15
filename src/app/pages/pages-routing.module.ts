@@ -13,8 +13,15 @@ const routes: Routes = [
         component: DemoComponent,
       },
       {
+        path: 'experiments',
+        loadChildren: () =>
+          import('./experiments/experiments.module').then(
+            (m) => m.ExperimentsModule
+          ),
+      },
+      {
         path: '',
-        redirectTo: 'demo',
+        redirectTo: 'experiments',
         pathMatch: 'full',
       },
       {

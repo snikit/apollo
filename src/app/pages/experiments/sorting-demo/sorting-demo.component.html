@@ -1,0 +1,13 @@
+<h2>{{ activeAlgo }}!</h2>
+
+<button (click)="sort()">show sorting</button>
+
+<div *ngFor="let i of arrayToSort; let index = index" class="barcontainer m-1">
+  <div
+    class="bars pr-3"
+    [ngClass]="{ active: index == activeIndex }"
+    [style.width.%]="i"
+  >
+    <b>{{ i }}</b>
+  </div>
+</div>

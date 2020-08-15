@@ -4,7 +4,7 @@
 
 #sidebar-wrapper {
   min-height: 100vh;
-  margin-left: -6rem;
+  margin-left: -8rem;
   -webkit-transition: margin 0.25s ease-out;
   -moz-transition: margin 0.25s ease-out;
   -o-transition: margin 0.25s ease-out;
@@ -14,12 +14,12 @@
 #sidebar-wrapper .sidebar-heading {
   padding: 0.5rem;
   font-size: 1.2rem;
-  width: 6rem;
+  width: 8rem;
   height: 8rem;
 }
 
 #sidebar-wrapper .list-group {
-  width: 6rem;
+  width: 8rem;
   font-size: 0.8rem;
 }
 
@@ -42,12 +42,13 @@
   }
 
   #wrapper.toggled #sidebar-wrapper {
-    margin-left: -6rem;
+    margin-left: -8rem;
   }
 }
 
 .list-group-item {
   border: 0px;
+  height: 6rem;
   // padding-top: 1.5rem;
   // padding-bottom: 1.5rem;
 }
