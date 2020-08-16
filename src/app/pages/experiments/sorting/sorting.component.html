@@ -3,16 +3,17 @@
     <div class="col">
       <div class="card-deck">
         <div
+          *ngFor="let algos of SORTING_ALGOS | keyvalue"
           class="card bg-lite"
-          [routerLink]="['../sorting-demo', { algo: 'bubblesort' }]"
+          [routerLink]="['../sorting-demo', { algo: algos.value }]"
         >
           <!-- <img src="..." class="card-img-top" alt="..."> -->
           <div class="card-body">
-            <h5 class="card-title">Bubble Sort</h5>
+            <h5 class="card-title">{{ algos.value }}</h5>
             <p class="card-text">
-              Bubble Sort is the simplest sorting algorithm that works by
-              repeatedly swapping the adjacent elements if they are in wrong
-              order.
+              Contrary to popular belief, Lorem Ipsum is not simply random text.
+              It has roots in a piece of classical Latin literature from 45 BC,
+              making it over 2000 years old.
             </p>
           </div>
         </div>

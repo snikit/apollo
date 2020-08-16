@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SORTING_ALGOS } from './sorting.utils';
 
 @Component({
   selector: 'app-sorting',
@@ -6,5 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sorting.component.scss'],
 })
 export class SortingComponent {
+
+  SORTING_ALGOS = SORTING_ALGOS;
+
   constructor() {}
 }
