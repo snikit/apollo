@@ -5,7 +5,7 @@
 <div *ngFor="let i of arrayToSort; let index = index" class="barcontainer m-1">
   <div
     class="bars pr-3"
-    [ngClass]="{ active: index == activeIndex }"
+    [ngClass]="{ active: index == activeIndex , activeCompare : index == comparaingIndex  } "
     [style.width.%]="i"
   >
     <b>{{ i }}</b>

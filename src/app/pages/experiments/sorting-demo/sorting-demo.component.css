@@ -12,5 +12,10 @@
 }
 
 .active {
+  background-color: green !important;
+}
+
+
+.activeCompare {
   background-color: red !important;
 }

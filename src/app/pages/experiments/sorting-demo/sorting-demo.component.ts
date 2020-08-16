@@ -9,7 +9,8 @@ import { bubbleSort } from '../sorting/sorting.utils';
 })
 export class SortingDemoComponent implements OnInit {
   activeAlgo = '';
-  activeIndex = 0;
+  activeIndex = -1;
+  comparaingIndex = -1;
   arrayToSort = [
     13,
     7,
@@ -39,8 +40,13 @@ export class SortingDemoComponent implements OnInit {
   }
 
   sort() {
-    bubbleSort(this.arrayToSort, 100, (activeIndex: number) => {
+    bubbleSort(this.arrayToSort, 100, (activeIndex: number , comparaingIndex : number) => {
       this.activeIndex = activeIndex;
-    });
+      this.comparaingIndex = comparaingIndex;
+    }).then(()=>{
+      this.activeIndex = -1;
+      this.comparaingIndex = -1;
+    })
+
   }
 }
