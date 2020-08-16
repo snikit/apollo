@@ -35,6 +35,21 @@ export class SortingDemoComponent implements OnInit {
     78,
     18,
     5,
+    95,
+    65,
+    34,
+    77,
+    13,
+    10,
+    29,
+    24,
+    60,
+    11,
+    5,
+    88,
+    73,
+    32,
+    19,
   ];
 
   constructor(private route: ActivatedRoute) {}
@@ -60,7 +75,7 @@ export class SortingDemoComponent implements OnInit {
 
     callingAlgo(
       this.arrayToSort,
-      100,
+      20,
       (activeIndex: number, comparaingIndex: number) => {
         this.activeIndex = activeIndex;
         this.comparaingIndex = comparaingIndex;

@@ -3,19 +3,36 @@ function timer(ms): Promise<void> {
 }
 
 export async function bubbleSort(
-  array: number[],
+  listToSort: number[],
   pausingTime: number,
   callback: (activeIndex: number, comparaingIndex: number) => void
 ): Promise<void> {
-  for (const i of array) {
-    for (let j = 0; j < array.length - 1; j++) {
-      callback(j, j + 1);
-      await timer(pausingTime);
-      if (array[j] > array[j + 1]) {
-        const swap = array[j];
-        array[j] = array[j + 1];
-        array[j + 1] = swap;
+  let i = 0;
+  let j = 0;
+  const len = listToSort.length;
+  let currentValue = 0;
+  let nextValue = 0;
+  let swapped = false;
+
+  for (i = 0; i < len; i++) {
+    swapped = false;
+    for (j = 0; j < len - 1; j++) {
+      currentValue = listToSort[j];
+      nextValue = listToSort[j + 1];
+
+      if (currentValue > nextValue) {
+        callback(j, j + 1);
+        await timer(pausingTime);
+
+        /* compare the adjacent elements */
+        listToSort[j] = nextValue; /* swap them */
+        listToSort[j + 1] = currentValue;
+        swapped = true;
       }
+    }
+    if (!swapped) {
+      /*if no number was swapped that means array is sorted now, break the loop.*/
+      break;
     }
   }
 }
